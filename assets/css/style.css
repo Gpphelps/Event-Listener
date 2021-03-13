@@ -1,0 +1,19 @@
+nav {
+    padding-left: 20px;
+}
+
+#main div {
+    padding-bottom: 20px;
+}
+
+input {
+    color: white;
+}
+
+.datepicker input {
+    color: black;
+}
+
+#search-btn {
+    border-radius: 20px;
+}
