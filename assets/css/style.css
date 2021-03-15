@@ -1,3 +1,4 @@
+
 nav {
     padding-left: 20px;
 }
@@ -17,3 +18,6 @@ input {
 #search-btn {
     border-radius: 20px;
 }
+
+#map { height: 180px; }
+

@@ -1,6 +1,6 @@
 <!doctype html>
-
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <title>EventViewer</title>
@@ -15,6 +15,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
+<head>
+  <meta charset="utf-8">
+
+  <title>EventViewer</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+  
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+</head>
+
+
 <body>
     <header>
         <div class="navbar-fixed">
@@ -27,6 +44,7 @@
     </header>
     
     
+
     <div class="row black" id="main">
         <div class="col s5" id="map">
                 <!--MAP GOES HERE-->
@@ -48,6 +66,35 @@
             <div>
                 <a class="light-blue darken-1 white-text waves-effect waves-teal btn-large" id="search-btn">Search Events Near You</a>
             </div>
+
+    <div id="main">
+        <img>
+        
+        <div id="map"></div>
+        <!---->
+
+        <div id="content">
+
+            
+            <div id="checkBox1"> <!--ALL CONENT ARE PLACEHOLDERS--> 
+
+                <p>Checkbox</p>
+                <div>
+                    <input type="checkbox" id="scales" name="scales"
+                           checked>
+                    <label for="scales">Scales</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="horns" name="horns">
+                    <label for="horns">Horns</label>
+                </div>
+
+
+            </div> <!--ALL CONENT ARE PLACEHOLDERS--> 
+
+            <p></p>
+
             <div id="subContent">
                 <!--ALL CONENT ARE PLACEHOLDERS--> 
             </div>
@@ -56,6 +103,6 @@
     
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
