@@ -1,5 +1,20 @@
 <!doctype html>
 <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>EventViewer</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
 <head>
   <meta charset="utf-8">
 
@@ -16,14 +31,42 @@
   
 </head>
 
-<body>
 
-    <div id="topBar">
-        <h1 id="title">EVENTLISTNER()</h1>
-        
-    </div>
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="white" id="topBar">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo black-text">EVENT LISTENER()</a>
+                </div>
+            </nav>
+        </div>
+    </header>
     
     
+
+    <div class="row black" id="main">
+        <div class="col s5" id="map">
+                <!--MAP GOES HERE-->
+        </div>
+          
+        <div class="col s7 white-text" id="content">
+            <h1>The best way to discover new events and experiences.</h1>
+            <!--ALL CONENT ARE PLACEHOLDERS--> 
+            <div class="input-field col s12"> 
+                <i class="material-icons prefix">place</i>
+                <input type="text"></input>
+                <label class="white-text">Location</label>
+            </div>
+            <div class="input-field col s12"> 
+                <i class="material-icons prefix">date_range</i>
+                <input type="text" class="datepicker"></input>
+                <label class="white-text">Start Date</label>
+            </div>
+            <div>
+                <a class="light-blue darken-1 white-text waves-effect waves-teal btn-large" id="search-btn">Search Events Near You</a>
+            </div>
+
     <div id="main">
         <img>
         
@@ -51,17 +94,15 @@
             </div> <!--ALL CONENT ARE PLACEHOLDERS--> 
 
             <p></p>
+
             <div id="subContent">
-
-
-
-
+                <!--ALL CONENT ARE PLACEHOLDERS--> 
             </div>
-
-        </div>
+        </div> 
     </div> 
     
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

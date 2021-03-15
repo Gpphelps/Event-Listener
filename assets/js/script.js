@@ -1,3 +1,14 @@
+var options = document.querySelector('option');
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
 
 var map = L.map('map').fitWorld();
 
@@ -23,6 +34,7 @@ function onLocationFound(e) {
 }
 
 map.on('locationfound', onLocationFound);
+
 
 
 
