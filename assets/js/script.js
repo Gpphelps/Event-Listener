@@ -24,7 +24,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 map.locate({setView: true, maxZoom: 16});
 
 function onLocationFound(e) {
-    var radius = e.accuracy /4;
+    var radius = e.accuracy /2;
 
     L.marker(e.latlng).addTo(map)
         .bindPopup("You are here!")
