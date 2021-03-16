@@ -1,0 +1,10 @@
+nav {
+    padding-left: 20px;
+}
+
+#back-btn {
+    border-radius: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
