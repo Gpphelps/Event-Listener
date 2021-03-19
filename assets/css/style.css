@@ -25,6 +25,11 @@ input {
     padding-bottom: 0%;
 }
 
+.leaflet-control-ocd-search-form {
+   
+}
+
 .leaflet-control-ocd-search-form input {
     color: black;
 }
+
