@@ -238,7 +238,7 @@
 				select(-1);
 				L.DomEvent.preventDefault(e);
 				break;
-			// Up
+			// Upadd
 			case 40:
 				select(1);
 				L.DomEvent.preventDefault(e);
