@@ -74,6 +74,10 @@ function findEvents() {
 
             L.marker([data._embedded.events[i]._embedded.venues[0].location.latitude, data._embedded.events[i]._embedded.venues[0].location.longitude]).addTo(map)
                 .bindPopup(data._embedded.events[i].name);
+
+            // L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
+            //     .bindPopup(data._embedded.events[i].name);
+
             tblSecondRow.appendChild(tblSecondColumnSecondRow);
             tblThirdRow.appendChild(tblSecondColumnThirdRow);
             console.log(data._embedded.events[i].url);
