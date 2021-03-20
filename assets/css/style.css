@@ -1,4 +1,6 @@
-
+body {
+    background-color: #000000;
+}
 nav {
     padding-left: 20px;
 }
@@ -21,15 +23,16 @@ input {
 
 #map { 
     height: 300px; 
-    width: 500px;
+    width: 100%;
     padding-bottom: 0%;
-}
-
-.leaflet-control-ocd-search-form {
-   
 }
 
 .leaflet-control-ocd-search-form input {
     color: black;
 }
 
+@media only screen and (max-width: 600px) {
+    #content h1 {
+        font-size: 2em;
+    }
+}
