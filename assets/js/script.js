@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 document.getElementById("search-btn").addEventListener("click", function() {
-    alert("It Works!");
+    var startDate
+    localStorage.setItem("locLatLong", parsedLatLong);
+    var startDate = document.getElementById("startDate").value;
+    localStorage.setItem("startDate", startDate );
+    window.location.assign("./results.html");
   });
 
 var map = L.map('map').fitWorld();
@@ -15,6 +19,7 @@ var map = L.map('map').fitWorld();
 var city;
 var userLat;
 var userLng;
+var parsedLatLong;
 
 var options = {
     key: 'c5540aeadb104afa8d407476d1928a32',
@@ -22,15 +27,11 @@ var options = {
     expand: 'click',
     position: 'topright',
     onResultClick: function(result) {
-      console.log(result);
       city = result.name;
-      console.log(city);
       userLat = result.center.lat;
       userLng = result.center.lng;
       localStorage.setItem('originLat', userLat);
       localStorage.setItem('originLong', userLng);
-      console.log(userLat);
-      console.log(userLng);
       document.getElementById("location-text").value=city;
       assignValues(result.name, result.center.lat, result.center.lng);
       getLatLong();
@@ -62,7 +63,6 @@ function onLocationFound(e) {
  L.marker(e.latlng).addTo(map)
         .bindPopup("You are here!")
         .openPopup();
-    console.log(e.latlng);
       localStorage.setItem('originLat', e.latlng.lat);
       localStorage.setItem('originLng', e.latlng.lng);
       assignValues("Current Location", e.latlng.lat, e.latlng.lng);
@@ -77,29 +77,20 @@ function getLatLong() {
   var longString = localStorage.getItem('originLong');
   var newLatString;
   var newLongString;
-  var parsedLatLong;
-
-  console.log(latString);
-  console.log(longString);
 
   if (latString.startsWith('-')) {
     newLatString = latString.substr(0,9);
-    console.log(newLatString);
   } else {
     newLatString = latString.substr(0,8);
-    console.log(newLatString);
   };
 
   if (longString.startsWith('-')) {
     newLongString = longString.substr(0,9);
-    console.log(newLongString);
   } else {
     newLongString = longString.substr(0,8);
-    console.log(typeof(newLongString));
   };
 
   parsedLatLong = `${newLatString},${newLongString}`
-  console.log(parsedLatLong);
 }
 
 
