@@ -23,13 +23,15 @@ var options = {
       console.log(city);
       userLat = result.center.lat;
       userLng = result.center.lng;
+      localStorage.setItem('originLat', userLat);
+      localStorage.setItem('originLong', userLng);
       console.log(userLat);
       console.log(userLng);
       document.getElementById("location-text").value=city;
       assignValues(result.name, result.center.lat, result.center.lng);
+      getLatLong();
     }
 };
-
 
 function assignValues(cityValue, latValue, lngValue) {
   city = cityValue;
@@ -64,8 +66,36 @@ function onLocationFound(e) {
 map.on('locationfound', onLocationFound);
 
 
+function getLatLong() {
+  var latString = localStorage.getItem('originLat');
+  var longString = localStorage.getItem('originLong');
+  var newLatString;
+  var newLongString;
+  var parsedLatLong;
 
+  console.log(latString);
+  console.log(longString);
 
+  if (latString.startsWith('-')) {
+    newLatString = latString.substr(0,9);
+    console.log(newLatString);
+  } else {
+    newLatString = latString.substr(0,8);
+    console.log(newLatString);
+  };
+
+  if (longString.startsWith('-')) {
+    newLongString = longString.substr(0,9);
+    console.log(newLongString);
+  } else {
+    newLongString = longString.substr(0,8);
+    console.log(typeof(newLongString));
+  };
+
+  //parsedLatLong = newLatString + "," + newLongString;
+  parsedLatLong = `${newLatString},${newLongString}`
+  console.log(parsedLatLong);
+}
 
 
 
