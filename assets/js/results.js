@@ -1,3 +1,4 @@
+  
 var map = L.map("map2").setView([localStorage.getItem("originLat"), localStorage.getItem("originLong")], 13);
 var startDate= localStorage.getItem("startDate"); /*2021-03-17"*/
 var locLatLong= localStorage.getItem("locLatLong"); /*36.05452,-80.27807"*/
