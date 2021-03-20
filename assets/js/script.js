@@ -58,7 +58,7 @@ function onLocationFound(e) {
  L.marker(e.latlng).addTo(map)
         .bindPopup("You are here!")
         .openPopup();
-    console.log(e);
+    console.log(e.latlng);
         assignValues("Current Location", e.latlng.lat, e.latlng.lng);
 }
 
