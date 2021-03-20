@@ -60,7 +60,7 @@ function onLocationFound(e) {
         .openPopup();
     console.log(e.latlng);
       localStorage.setItem('originLat', e.latlng.lat);
-      localStorage.setItem('originLng', e.latlng.lng);
+      localStorage.setItem('originLong', e.latlng.lng);
       assignValues("Current Location", e.latlng.lat, e.latlng.lng);
 }
 
