@@ -1,6 +1,8 @@
 var map = L.map("map2").fitWorld();
 var startDate= localStorage.GetItem("startDate"); /*2021-03-17"*/
 var locLatLong= localStorage.GetItem("locLatLong"); /*36.05452,-80.27807"*/
+var originLat = localStorage.GetItem("originLat");
+var originLong = localStorage.GetItem("originLong");
 var tblResults = document.querySelector('#results');
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
