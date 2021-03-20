@@ -14,19 +14,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZ3BwaGVscHMiLCJhIjoiY2ttN3Y3cmx5MTFuZzJ1czNmaGhmZ3B0YSJ9.zUETVN98ZHqjHjcUG8OFTg',
 }).addTo(map);
 
-// map.locate({setView: true, maxZoom: 16});
-
-// function onLocationFound(e) {
-//     var radius = e.accuracy /2;
-
-//     L.marker(e.latlng).addTo(map)
-//         .bindPopup("You are here!")
-//         .openPopup();
-
-//     L.circle(e.latlng, radius).addTo(map);
-// };
-
-// map.on('locationfound', onLocationFound);
+document.getElementById("back-btn").addEventListener("click", function() {
+  window.location.assign("./index.html");
+});
 
 
 
@@ -80,8 +70,13 @@ function findEvents() {
               tblSecondColumnSecondRow.textContent = data._embedded.events[i].dates.start.localDate + " " + data._embedded.events[i].dates.start.localTime
               tblSecondColumnThirdRow.textContent = data._embedded.events[i]._embedded.venues[0].name;
             }
-            L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
-            .bindPopup(data._embedded.events[i].name);
+
+            L.marker([data._embedded.events[i]._embedded.venues[0].location.latitude, data._embedded.events[i]._embedded.venues[0].location.longitude]).addTo(map)
+                .bindPopup(data._embedded.events[i].name);
+
+            // L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
+            //     .bindPopup(data._embedded.events[i].name);
+
             tblSecondRow.appendChild(tblSecondColumnSecondRow);
             tblThirdRow.appendChild(tblSecondColumnThirdRow);
             console.log(data._embedded.events[i].url);
