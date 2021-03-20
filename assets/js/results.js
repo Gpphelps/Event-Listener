@@ -1,4 +1,4 @@
-var map = L.map("map2").fitWorld();
+var map = L.map("map2").setView([localStorage.getItem("originLat"), localTime.getItem("originLong")], 13);
 var startDate= localStorage.GetItem("startDate"); /*2021-03-17"*/
 var locLatLong= localStorage.GetItem("locLatLong"); /*36.05452,-80.27807"*/
 var tblResults = document.querySelector('#results');
@@ -12,19 +12,21 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZ3BwaGVscHMiLCJhIjoiY2ttN3Y3cmx5MTFuZzJ1czNmaGhmZ3B0YSJ9.zUETVN98ZHqjHjcUG8OFTg',
 }).addTo(map);
 
-map.locate({setView: true, maxZoom: 16});
+// map.locate({setView: true, maxZoom: 16});
 
-function onLocationFound(e) {
-    var radius = e.accuracy /2;
+// function onLocationFound(e) {
+//     var radius = e.accuracy /2;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are here!")
-        .openPopup();
+//     L.marker(e.latlng).addTo(map)
+//         .bindPopup("You are here!")
+//         .openPopup();
 
-    L.circle(e.latlng, radius).addTo(map);
-};
+//     L.circle(e.latlng, radius).addTo(map);
+// };
 
-map.on('locationfound', onLocationFound);
+// map.on('locationfound', onLocationFound);
+
+
 
 function findEvents() {
       var strQuery = "https://app.ticketmaster.com/discovery/v2/events.json?latlong=" + locLatLong + "&sort=date%2Casc&unit=miles&radius=100&tab=events&startDateTime=" + startDate + "T00:00:00Z&apikey=r6SGj0AX62Qeuo5HGhQmP6lEqmuH9LBy"
@@ -76,6 +78,8 @@ function findEvents() {
               tblSecondColumnSecondRow.textContent = data._embedded.events[i].dates.start.localDate + " " + data._embedded.events[i].dates.start.localTime
               tblSecondColumnThirdRow.textContent = data._embedded.events[i]._embedded.venues[0].name;
             }
+            L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
+                .bindPopup(data._embedded.events[i].name);
             tblSecondRow.appendChild(tblSecondColumnSecondRow);
             tblThirdRow.appendChild(tblSecondColumnThirdRow);
             console.log(data._embedded.events[i].url);
@@ -91,4 +95,4 @@ function findEvents() {
     };
     
     
-    findEvents
+    findEvents()
