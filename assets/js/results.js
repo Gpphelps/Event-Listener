@@ -1,8 +1,8 @@
-var map = L.map("map2").setView([localStorage.getItem("originLat"), localTime.getItem("originLong")], 13);
-var startDate= localStorage.GetItem("startDate"); /*2021-03-17"*/
-var locLatLong= localStorage.GetItem("locLatLong"); /*36.05452,-80.27807"*/
-var originLat = localStorage.GetItem("originLat");
-var originLong = localStorage.GetItem("originLong");
+var map = L.map("map2").setView([localStorage.getItem("originLat"), localStorage.getItem("originLong")], 13);
+var startDate= localStorage.getItem("startDate"); /*2021-03-17"*/
+var locLatLong= localStorage.getItem("locLatLong"); /*36.05452,-80.27807"*/
+var originLat = localStorage.getItem("originLat");
+var originLong = localStorage.getItem("originLong");
 var tblResults = document.querySelector('#results');
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -80,8 +80,8 @@ function findEvents() {
               tblSecondColumnSecondRow.textContent = data._embedded.events[i].dates.start.localDate + " " + data._embedded.events[i].dates.start.localTime
               tblSecondColumnThirdRow.textContent = data._embedded.events[i]._embedded.venues[0].name;
             }
-            L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
-                .bindPopup(data._embedded.events[i].name);
+            // L.marker([data._embedded.events[i]_embedded.venues[0].location.latitude, data._embedded.events[i]_embedded.venues[0].location.longitude]).addTo(map)
+            //     .bindPopup(data._embedded.events[i].name);
             tblSecondRow.appendChild(tblSecondColumnSecondRow);
             tblThirdRow.appendChild(tblSecondColumnThirdRow);
             console.log(data._embedded.events[i].url);
