@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Datepicker.init(elems, options);
   });
 
+document.getElementById("search-btn").addEventListener("click", function() {
+    alert("It Works!");
+  });
+
 var map = L.map('map').fitWorld();
 
 var city;
