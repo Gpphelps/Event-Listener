@@ -59,7 +59,9 @@ function onLocationFound(e) {
         .bindPopup("You are here!")
         .openPopup();
     console.log(e.latlng);
-        assignValues("Current Location", e.latlng.lat, e.latlng.lng);
+      localStorage.setItem('originLat', e.latlng.lat);
+      localStorage.setItem('originLng', e.latlng.lng);
+      assignValues("Current Location", e.latlng.lat, e.latlng.lng);
 }
 
 
@@ -92,7 +94,6 @@ function getLatLong() {
     console.log(typeof(newLongString));
   };
 
-  //parsedLatLong = newLatString + "," + newLongString;
   parsedLatLong = `${newLatString},${newLongString}`
   console.log(parsedLatLong);
 }
