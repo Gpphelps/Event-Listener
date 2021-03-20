@@ -9,6 +9,7 @@
   <meta name="author" content="SitePoint">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/opencagedata/leaflet-opencage-search@1.4.1/dist/css/L.Control.OpenCageData.Search.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   <link rel="stylesheet" href="assets/css/results.css">
 </head>
@@ -26,48 +27,26 @@
     </header>
 
 
-
-    <div id="main" class="container">
-        <div class="row" id="content">
-            <div class="col s12 m12 l8 white-text" id="map2"><a href="https://placeholder.com"><img src="https://via.placeholder.com/500"></a></div>
-            <div class="col s12 m12 l4" id="results-display">
-                <h1 class="white-text col s12">Your Events</h1>
-                <p class="white-text col s12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nisi explicabo accusantium dolor tempora blanditiis odit sequi facere voluptates, adipisci pariatur distinctio nihil minus perspiciatis eius natus numquam accusamus quos.
-
     <div class="topBar">
         <h1 id="title">EVENTLISTNER()</h1>
     </div>
 
     <div id="map2"> </div>
-    <div class="main">
+    <table id="results">
+        <tbody>
+        <tr>
+          <th>Image</th>
+          <th>Description</th>
+        </tr>
+      </tbody>
+    </table>
         
 
-        <div>
-            <button type="button">THIS IS A BUTTON</button>
-        </div>
-
-        <div id="content">
-            <aside>
-                <h1>Your Events</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nisi explicabo accusantium dolor tempora
-                    blanditiis odit sequi facere voluptates, adipisci pariatur distinctio nihil minus perspiciatis eius
-                    natus numquam accusamus quos.
-
-                </p>
-                <ul>
-                    <li class="white-text col s12">testing unordered list</li>
-                    <li class="white-text col s12">testing unordered list</li>
-                    <li class="white-text col s12">testing unordered list</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-   
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+     crossorigin=""></script>
+    <script src="./assets/js/L.Control.OpenCageSearch.dev.js"></script>
     <script src="assets/js/results.js"></script>
 </body>
 
