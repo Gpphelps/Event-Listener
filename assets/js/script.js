@@ -79,6 +79,7 @@ function onLocationFound(e) {
       getUserLatLong();      
 }
 
+/*This function parses the latitide and longitude provided by our map so that it meets the Ticketmaster API required latitude and longitude format*/
 function getUserLatLong() {
       lat = localStorage.getItem('originLat');
       long = localStorage.getItem('originLong');
