@@ -17,6 +17,10 @@ input {
     color: black;
 }
 
+.dropdown-trigger {
+    color: #607d8b;
+}
+
 #search-btn {
     border-radius: 20px;
 }
@@ -36,3 +40,10 @@ input {
         font-size: 2em;
     }
 }
+
+@media only screen and (max-width: 515px) {
+    #title {
+        font-size: 1.25em;
+    }
+}
+
