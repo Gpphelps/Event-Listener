@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById("search-btn").addEventListener("click", function() {
     var startDate
+    /*If the user presses the search button without providing a date, default to the current date.
+      Write all data to local storage, then open the results.html page.*/
     if(document.getElementById("startDate").value !== "") {
-    localStorage.setItem("locLatLong", parsedLatLong);
-    var startDate = document.getElementById("startDate").value;
-    localStorage.setItem("startDate", startDate );
-    window.location.assign("./results.html");
+      localStorage.setItem("locLatLong", parsedLatLong);
+      var startDate = document.getElementById("startDate").value;
+      localStorage.setItem("startDate", startDate );
+      window.location.assign("./results.html");
     } else {
       var today = new Date().toISOString().slice(0, 10)
       document.getElementById("startDate").value = today;
