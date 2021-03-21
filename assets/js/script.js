@@ -14,7 +14,10 @@ document.getElementById("search-btn").addEventListener("click", function() {
     localStorage.setItem("startDate", startDate );
     window.location.assign("./results.html");
     } else {
-      alert("Please enter a Start Date.")
+      var today = new Date().toISOString().slice(0, 10)
+      document.getElementById("startDate").value = today;
+      localStorage.setItem("startDate", today );
+      window.location.assign("./results.html");
     };
   });
 
