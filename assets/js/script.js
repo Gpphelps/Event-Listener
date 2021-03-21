@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById("search-btn").addEventListener("click", function() {
     var startDate
+    if(document.getElementById("startDate").value !== "") {
     localStorage.setItem("locLatLong", parsedLatLong);
     var startDate = document.getElementById("startDate").value;
     localStorage.setItem("startDate", startDate );
     window.location.assign("./results.html");
+    } else {
+      alert("Please enter a Start Date.")
+    };
   });
 
 var map = L.map('map').fitWorld();
