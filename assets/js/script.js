@@ -66,6 +66,27 @@ function onLocationFound(e) {
       localStorage.setItem('originLat', e.latlng.lat);
       localStorage.setItem('originLong', e.latlng.lng);
       assignValues("Current Location", e.latlng.lat, e.latlng.lng);
+      getUserLatLong();      
+}
+
+function getUserLatLong() {
+      lat = localStorage.getItem('originLat');
+      long = localStorage.getItem('originLong');
+      var userLatString;
+      var userLongString;
+      if (lat.startsWith('-')) {
+        userLatString = lat.substr(0,9);
+      } else {
+        userLatString = lat.substr(0,8);
+      };
+    
+      if (long.startsWith('-')) {
+        userLongString = long.substr(0,9);
+      } else {
+        userLongString = long.substr(0,8);
+      }
+      parsedLatLong = `${userLatString},${userLongString}`
+      localStorage.setItem('locLatLong', parsedLatLong);
 }
 
 
