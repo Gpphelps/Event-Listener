@@ -21,6 +21,7 @@ document.getElementById("search-btn").addEventListener("click", function() {
     };
   });
 
+
 var map = L.map('map').fitWorld();
 
 var city;
