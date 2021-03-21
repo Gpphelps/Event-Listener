@@ -2,6 +2,7 @@ nav {
     padding-left: 20px;
 }
 
+/*Styling for Go Back button*/
 #back-btn {
     border-radius: 20px;
     float: right;
@@ -9,6 +10,7 @@ nav {
     margin-top: 50px;
 }
 
+/*Styling for button on second page*/
 #map2 {
     height: 300px;
 }
@@ -25,6 +27,7 @@ tr {
     background-color: #039be5;
 }
 
+/*Make title font smaller on smaller screen size*/
 @media only screen and (max-width: 515px) {
     #title {
         font-size: 1.25em;
