@@ -21,7 +21,12 @@ input {
     color: black;
 }
 
+.datepicker {
+    cursor: pointer;
+}
+
 /*Update color of month at top of datepicker calender*/
+
 .dropdown-trigger {
     color: #607d8b;
 }
@@ -30,7 +35,14 @@ input {
     border-radius: 20px;
 }
 
+
+#location-text {
+    pointer-events:none;
+}
+
+
 /*Sets styling for map on homepage*/
+
 #map { 
     height: 300px; 
     width: 100%;
