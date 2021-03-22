@@ -30,8 +30,11 @@ tr {
 }
 
 /*Make title font smaller on smaller screen size*/
-@media only screen and (max-width: 515px) {
+@media only screen and (max-width: 600px) {
     #title {
         font-size: 1.25em;
+    }
+    #back-btn {
+        width: 60px;
     }
 }
