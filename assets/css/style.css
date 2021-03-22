@@ -21,6 +21,8 @@ input {
     cursor: pointer;
 }
 
+/*Update color of month at top of datepicker calender*/
+
 .dropdown-trigger {
     color: #607d8b;
 }
@@ -29,9 +31,13 @@ input {
     border-radius: 20px;
 }
 
+
 #location-text {
     pointer-events:none;
 }
+
+
+/*Sets styling for map on homepage*/
 
 #map { 
     height: 300px; 
@@ -39,16 +45,19 @@ input {
     padding-bottom: 0%;
 }
 
+/*Makes map searchbox text black*/
 .leaflet-control-ocd-search-form input {
     color: black;
 }
 
+/*Make body text smaller on smaller screen size*/
 @media only screen and (max-width: 600px) {
     #content h1 {
         font-size: 2em;
     }
 }
 
+/*Make title font smaller on smaller screen size*/
 @media only screen and (max-width: 515px) {
     #title {
         font-size: 1.25em;
