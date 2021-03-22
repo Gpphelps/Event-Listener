@@ -11,7 +11,7 @@ document.getElementById("search-btn").addEventListener("click", function() {
     /*If the user presses the search button without providing a date, default to the current date.
       Write all data to local storage, then open the results.html page.*/
     if(document.getElementById("startDate").value !== "") {
-      localStorage.setItem("locLatLong", parsedLatLong);
+      
       var startDate = document.getElementById("startDate").value;
       localStorage.setItem("startDate", startDate );
       window.location.assign("./results.html");
@@ -134,6 +134,7 @@ function getLatLong() {
   };
 
   parsedLatLong = `${newLatString},${newLongString}`
+  localStorage.setItem("locLatLong", parsedLatLong);
 }
 
 
