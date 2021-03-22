@@ -85,7 +85,12 @@ function onLocationFound(e) {
       assignValues("Current Location", e.latlng.lat, e.latlng.lng);
       getUserLatLong();      
 }
+
 // function that checks the lat or the long to see if it starts with a negative and parses the appropriate ammont of digits from the end of the origional lat and long to make it accepted by the Discovery API
+
+
+/*This function parses the latitide and longitude provided by our map so that it meets the Ticketmaster API required latitude and longitude format*/
+
 function getUserLatLong() {
       lat = localStorage.getItem('originLat');
       long = localStorage.getItem('originLong');
