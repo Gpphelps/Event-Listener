@@ -17,12 +17,20 @@ input {
     color: black;
 }
 
+.datepicker {
+    cursor: pointer;
+}
+
 .dropdown-trigger {
     color: #607d8b;
 }
 
 #search-btn {
     border-radius: 20px;
+}
+
+#location-text {
+    pointer-events:none;
 }
 
 #map { 
