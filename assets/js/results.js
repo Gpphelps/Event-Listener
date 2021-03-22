@@ -1,12 +1,12 @@
-  
-/*Get location and start date values from the Index.html page which were placed in Local Storage as well as the pre-existing table*/
+// creates the map in the element with the id=map2 and sets the veiw to the users chosen location from index.html
 var map = L.map("map2").setView([localStorage.getItem("originLat"), localStorage.getItem("originLong")], 8);
+/*Get location and start date values from the Index.html page which were placed in Local Storage as well as the pre-existing table*/
 var startDate= localStorage.getItem("startDate");
 var locLatLong= localStorage.getItem("locLatLong");
 var originLat = localStorage.getItem("originLat");
 var originLong = localStorage.getItem("originLong");
 var tblResults = document.querySelector('#results');
-
+// applies the map layer to the created map
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -25,14 +25,13 @@ document.getElementById("back-btn").addEventListener("click", function() {
 /* This function sends the query to the Discovery API and assembles a table to contain the data items returned that we elected to display. */
 function findEvents() {
       var strQuery = "https://app.ticketmaster.com/discovery/v2/events.json?latlong=" + locLatLong + "&sort=date%2Casc&unit=miles&radius=100&tab=events&startDateTime=" + startDate + "T00:00:00Z&apikey=r6SGj0AX62Qeuo5HGhQmP6lEqmuH9LBy"
-      console.log(strQuery);
+      
       
       fetch(strQuery)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         var tblFirstRow
         var tblSecondRow
         var tblThirdRow
@@ -43,7 +42,7 @@ function findEvents() {
         var tblImage
         var tblTicketLink
         var tblBody
-
+        /*for loop that creates the following for events pulled from Discovery API */
         for (var i = 0; i < data._embedded.events.length; i++) {
             tblFirstRow = document.createElement('tr');
             tblSecondRow = document.createElement('tr');

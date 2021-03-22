@@ -5,6 +5,10 @@ nav {
     padding-left: 20px;
 }
 
+#location-text {
+    pointer-events:none;
+}
+
 #main div {
     padding-bottom: 20px;
 }
