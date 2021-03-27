@@ -2,7 +2,7 @@
 Event Listener() is a mobile-first web application that helps users find events based on their current location or a searched location. Currently, Event Listener() is limited to locations in North America.
 
 ## Link to Deployed Application
-[Code Quiz](https://gpphelps.github.io/Event-Listener/index.html)
+[Event Listener()](https://gpphelps.github.io/Event-Listener/index.html)
 
 ## Technologies Used
 * HTML
